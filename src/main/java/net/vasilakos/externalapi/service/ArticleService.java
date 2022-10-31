@@ -12,6 +12,6 @@ public class ArticleService {
     private RestTemplate template = new RestTemplate();
 
     public Articles getTopArticles(){
-        return template.getForObject("https://newsapi.org/v2/top-headlines?country=gr&apiKey=69da66d8f6aa4f50b7d638024901d3d2", Articles.class);
+        return template.getForObject("https://newsapi.org/v2/top-headlines?country=gr&apiKey=yourAPIKey", Articles.class);
     }
 }
