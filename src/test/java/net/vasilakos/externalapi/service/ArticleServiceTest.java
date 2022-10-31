@@ -24,7 +24,7 @@ class ArticleServiceTest {
     @Test
     void getTopArticles() {
         Articles articles = new Articles();
-        articles = template.getForObject("https://newsapi.org/v2/top-headlines?country=gr&apiKey=69da66d8f6aa4f50b7d638024901d3d2", Articles.class);
+        articles = template.getForObject("https://newsapi.org/v2/top-headlines?country=gr&apiKey=yourAPIKey", Articles.class);
 
         String body = null;
 
@@ -35,7 +35,7 @@ class ArticleServiceTest {
 
         //System.out.println(body);
 
-        emailSenderService.sendEmail("konstantina.mykoniati@yahoo.com","News",body);
+        emailSenderService.sendEmail("youremail@email.com","News",body);
     }
 
     @Test
